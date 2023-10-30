@@ -12,7 +12,9 @@ ReactDOM.render(
     <React.StrictMode>
         <RecoilRoot>
             <ThemeProvider theme={darkTheme}>
-                <App />
+                <QueryClientProvider client={queryClient}>
+                    <App />
+                </QueryClientProvider>
             </ThemeProvider>
         </RecoilRoot>
     </React.StrictMode>,
